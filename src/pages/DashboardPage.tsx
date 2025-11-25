@@ -7,7 +7,7 @@ import ActivityLogModal from '@/components/ActivityLogModal';
 import DarkModeToggle from '@/components/DarkModeToggle';
 import StreakDisplay from '@/components/StreakDisplay';
 import { Plus, LogOut, Gift, Trophy, TrendingDown, Calendar, Settings, BookOpen } from 'lucide-react';
-import { useGetMeQuery } from '@/services/api';
+import { useGetUserQuery } from '@/services/api';
 import { setCredentials } from '@/slices/authSlice';
 
 import { useNavigate } from 'react-router-dom';
@@ -20,7 +20,7 @@ export default function DashboardPage() {
     const dispatch = useDispatch();
 
     // Fetch fresh user stats
-    const { data: meData } = useGetMeQuery(undefined, {
+    const { data: meData } = useGetUserQuery(undefined, {
         skip: !token,
     });
 
