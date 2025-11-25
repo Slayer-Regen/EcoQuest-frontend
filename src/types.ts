@@ -17,9 +17,11 @@ export interface UserStats {
 
 export interface StreakInfo {
     currentStreak: number;
+    longestStreak: number;
     lastActivityDate: string | null;
-    nextMilestone: number;
-    daysToMilestone: number;
+    nextMilestone: { days: number; points: number } | null;
+    daysToMilestone?: number;
+    totalStreakPoints?: number;
 }
 
 export interface UserProfileResponse {
