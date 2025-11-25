@@ -18,8 +18,8 @@ export const api = createApi({
     tagTypes: ['User', 'Activity', 'Dashboard', 'Points', 'Leaderboard', 'Analytics', 'Summaries'],
     endpoints: (builder) => ({
         // Placeholder endpoints - will be implemented in upcoming weeks
-        getMe: builder.query({
-            query: () => '/api/me',
+        getUser: builder.query<ApiResponse<User>, void>({
+            query: () => '/api/users',
             providesTags: ['User'],
         }),
         getActivities: builder.query({
