@@ -91,9 +91,11 @@ export default function AuthCallbackPage() {
     );
 }
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+
 async function fetchUserProfile(token: string) {
     // Direct call to backend (CORS is enabled)
-    const response = await fetch('http://localhost:3000/api/me', {
+    const response = await fetch(`${API_URL}/api/users`, {
         headers: {
             Authorization: `Bearer ${token}`,
         },
