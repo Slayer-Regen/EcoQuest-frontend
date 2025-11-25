@@ -92,17 +92,19 @@ export const api = createApi({
 });
 
 export const {
-    useGetMeQuery,
-    useGetActivitiesQuery,
-    useCreateActivityMutation,
-    useDeleteActivityMutation,
-    useGetDashboardQuery,
-    useGetPointsQuery,
-    useRedeemRewardMutation,
-    useGetLeaderboardQuery,
-    useGetAnalyticsEmissionsQuery,
-    useGetAnalyticsBreakdownQuery,
-    useGetSummariesQuery,
-    useGenerateSummaryMutation,
-    useGetRedemptionHistoryQuery,
+    export const {
+        useGetUserQuery,
+        useGetActivitiesQuery,
+        useCreateActivityMutation,
+        useDeleteActivityMutation,
+        useGetDashboardQuery,
+        useGetPointsQuery,
+        useRedeemRewardMutation,
+        useGetLeaderboardQuery,
+        useGetAnalyticsEmissionsQuery,
+        useGetAnalyticsBreakdownQuery,
+        useGetSummariesQuery,
+        useGenerateSummaryMutation,
+        useGetRedemptionHistoryQuery,
+    } = api;
 } = api;
