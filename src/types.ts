@@ -8,6 +8,26 @@ export interface User {
     createdAt: string;
 }
 
+export interface UserStats {
+    totalActivities: number;
+    totalCo2Kg: number;
+    totalPointsEarned: number;
+    currentBalance: number;
+}
+
+export interface StreakInfo {
+    currentStreak: number;
+    lastActivityDate: string | null;
+    nextMilestone: number;
+    daysToMilestone: number;
+}
+
+export interface UserProfileResponse {
+    user: User;
+    stats: UserStats;
+    streak: StreakInfo;
+}
+
 export interface ApiResponse<T> {
     success: boolean;
     data: T;

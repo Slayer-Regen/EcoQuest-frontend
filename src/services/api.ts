@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { RootState } from '../store';
-import { ApiResponse, User, Activity, LeaderboardEntry, AnalyticsData, SummaryData, Redemption } from '../types';
+import { ApiResponse, UserProfileResponse } from '../types';
 
 const baseQuery = fetchBaseQuery({
     baseUrl: import.meta.env.VITE_API_URL || 'http://localhost:3000',
@@ -19,7 +19,7 @@ export const api = createApi({
     tagTypes: ['User', 'Activity', 'Dashboard', 'Points', 'Leaderboard', 'Analytics', 'Summaries'],
     endpoints: (builder) => ({
         // Placeholder endpoints - will be implemented in upcoming weeks
-        getUser: builder.query<ApiResponse<User>, void>({
+        getUser: builder.query<ApiResponse<UserProfileResponse>, void>({
             query: () => '/api/users',
             providesTags: ['User'],
         }),
